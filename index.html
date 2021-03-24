@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let message = prompt("Enter message", "")
+        let me = message;
+        console.log(message)
+        let a1 = [
+            ['a','b','c'],
+            ['d','e','f'],
+            ['g','h','i'],
+            ['j','k','l'],
+            ['m','n','o'],
+            ['p','q','r','s'],
+            ['t','u','v'],
+            ['w','x','y','z']
+        ]
+
+        getIndex = (a, n) => a.findIndex(e => e.indexOf(n) !== -1);
+
+       
+        
+
+        for(let i=0; i<me.length;i++){
+             let cf = cal(me[i])
+             let fp = "for "+ cf[0] +": button "+ cf[1] +" press "+ cf[2] +" times";
+             console.log(fp)
+        }
+
+    
+        function cal(e){
+            let ex = e.toLowerCase();
+            let mi = getIndex(a1, ex)
+            let si = a1[mi].findIndex(el => el === ex)
+            let  ind = [ex,mi+2, si+1]
+            return ind
+        }
+
+            
+    </script>
+</body>
+</html>
